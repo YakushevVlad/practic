@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,13 +7,14 @@
     <title>Practic</title>
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/media.css">
+    <link rel="stylesheet" href="./css/todolist.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" integrity="sha512-1cK78a1o+ht2JcaW6g8OXYwqpev9+6GqOkz9xmBN9iUUhIndKtxwILGWYOSibOKjLsEdjyjZvYDq/cZwNeak0w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
 </head>
 <body>
 
     <!-- шапка -->
-    <p id="home"></p>
-    <header class="header">
+    <header class="header" id="home">
         <div class="container">
             <!-- навигация -->
             <div class="header-nav">
@@ -22,8 +23,8 @@
                     <ul class="nav-list">
                         <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
                         <li class="nav-item"><a href="#skills" class="nav-link">Skills</a></li>
-                        <li class="nav-item"><a href="#!" class="nav-link">...</a></li>
-                        <li class="nav-item"><a href="#!" class="nav-link">...</a></li>
+                        <li class="nav-item"><a href="#todolist" class="nav-link">TodoList</a></li>
+                        <li class="nav-item"><a href="#wait" class="nav-link">...</a></li>
                         <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
                     </ul>
                     <button id="nav-btn" class="nav-button">
@@ -52,10 +53,9 @@
             </div>
         </div>
     </header>
-
+  
     <!-- скилы -->
-    <p id="skills"></p>
-    <section class="skills">
+    <skills class="skills" id="skills">
         <div class="container">
             <div class="skills-row">
 
@@ -79,16 +79,34 @@
 
             </div>
         </div>
-    </section>
+    </skills>
 
-    <!-- хм хм хм-->
-    <div class="wait" data-aos="fade-left">
-        <p><br><br><br><br><br>Someday there will be something here :з<br><br><br><br><br></p>
+    <!-- TODO List -->
+    <todolist class="todolist" id="todolist">
+        <div class="wrapper" data-aos="fade-left">
+            <div class="task-input">
+                <img src="./img/icons/bars-icon.svg" alt="icon">
+                <input type="text" placeholder="Add a new task">
+            </div>
+            <div class="controls">
+                <div class="filters">
+                    <span class="active" id="all">All</span>
+                    <span id="pending">Pending</span>
+                    <span id="completed">Completed</span>
+                </div>
+                <button class="clear-btn">Clear All</button>
+            </div>
+            <ul class="task-box"></ul>
+        </div>
+    </todolist>
+
+    <!-- хм хм хм -->
+    <div class="wait" data-aos="fade-left" id="wait">
+        <p><br>Someday there will be something here :з<br><br><br></p>
     </div>
 
     <!-- контакты -->
-    <p id="contact"></p>
-    <footer class="contacts">
+    <footer class="contacts" id="contact">
         <div class="container">
             <div class="contacts-title">
                 <h2 class="title">Contacts</h2>
@@ -111,5 +129,6 @@
     </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" integrity="sha512-A7AYk1fGKX6S2SsHywmPkrnzTZHrgiVT7GcQkLGDe2ev0aWb8zejytzS8wjo7PGEXKqJOrjQ4oORtnimIRZBtw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="./js/main.js"></script>
+    <script src="./js/todolist.js"></script>
 </body>
 </html>

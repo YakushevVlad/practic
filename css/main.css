@@ -2,6 +2,11 @@
 @import "./reset.css";
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap'); /* шрифт */
 
+
+html {
+    scroll-behavior: smooth;
+}
+
 /* семейство шрифтов */
 body {
     color: #000; 
@@ -30,6 +35,7 @@ body {
     font-weight: 600; 
 }
 
+/* кнопки */
 .btn {
     display: inline-block;
     padding: 7px 22px;
@@ -110,8 +116,8 @@ body {
     color: #000;
 }
 
-.nav-link.active {
-    color: #606060;
+.nav-link:hover {
+    color: #ccc;
 }
 
 /* контент в шапке */

@@ -10,4 +10,5 @@ navBtn.onclick = () => {
     }
 }
 
+
 AOS.init();
